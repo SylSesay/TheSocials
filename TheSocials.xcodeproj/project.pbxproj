@@ -20,7 +20,6 @@
 		E1A4CF0E24062E0C00F2277B /* TheSocialsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A4CF0D24062E0C00F2277B /* TheSocialsTests.swift */; };
 		E1A4CF1924062E0C00F2277B /* TheSocialsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A4CF1824062E0C00F2277B /* TheSocialsUITests.swift */; };
 		E1A4CF27240639D200F2277B /* twitterLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A4CF26240639D200F2277B /* twitterLoginViewController.swift */; };
-		E1B51FF7240C9BBD006DBD9D /* twitterNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B51FF6240C9BBD006DBD9D /* twitterNavigationViewController.swift */; };
 		F1F6E0CAE53F16487E3D0E72 /* Pods_TheSocialsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F1C88EDF14334C02FFED64B /* Pods_TheSocialsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,7 +66,6 @@
 		E1A4CF1824062E0C00F2277B /* TheSocialsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheSocialsUITests.swift; sourceTree = "<group>"; };
 		E1A4CF1A24062E0C00F2277B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1A4CF26240639D200F2277B /* twitterLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = twitterLoginViewController.swift; sourceTree = "<group>"; };
-		E1B51FF6240C9BBD006DBD9D /* twitterNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = twitterNavigationViewController.swift; sourceTree = "<group>"; };
 		EBB006FD27124507370EFBBD /* Pods-TheSocialsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheSocialsTests.release.xcconfig"; path = "Target Support Files/Pods-TheSocialsTests/Pods-TheSocialsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,17 +145,16 @@
 		E1A4CEF524062E0B00F2277B /* TheSocials */ = {
 			isa = PBXGroup;
 			children = (
+				E1A4CEFF24062E0C00F2277B /* Assets.xcassets */,
 				E102A2FB2408C52E0005CCE9 /* TwitterAPICaller.swift */,
 				E1A4CEF624062E0B00F2277B /* AppDelegate.swift */,
 				E1A4CEF824062E0B00F2277B /* SceneDelegate.swift */,
 				E1A4CEFC24062E0B00F2277B /* Main.storyboard */,
-				E1A4CEFF24062E0C00F2277B /* Assets.xcassets */,
 				E1A4CF0124062E0C00F2277B /* LaunchScreen.storyboard */,
 				E1A4CF0424062E0C00F2277B /* Info.plist */,
 				E1A4CF26240639D200F2277B /* twitterLoginViewController.swift */,
 				E102A2FD2408C8410005CCE9 /* twitterHomeTableViewController.swift */,
 				E188ECEC240A2DFC0007AA4A /* tweetCellTableViewCell.swift */,
-				E1B51FF6240C9BBD006DBD9D /* twitterNavigationViewController.swift */,
 			);
 			path = TheSocials;
 			sourceTree = "<group>";
@@ -456,7 +453,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E188ECED240A2DFC0007AA4A /* tweetCellTableViewCell.swift in Sources */,
-				E1B51FF7240C9BBD006DBD9D /* twitterNavigationViewController.swift in Sources */,
 				E1A4CF27240639D200F2277B /* twitterLoginViewController.swift in Sources */,
 				E102A2FC2408C52E0005CCE9 /* TwitterAPICaller.swift in Sources */,
 				E102A2FE2408C8410005CCE9 /* twitterHomeTableViewController.swift in Sources */,
@@ -642,7 +638,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = CSProject.TheSocials;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CSProject.TheSocials;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -661,7 +657,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = CSProject.TheSocials;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CSProject.TheSocials;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

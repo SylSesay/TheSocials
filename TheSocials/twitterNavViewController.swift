@@ -8,7 +8,7 @@
 
 import UIKit
 
-class twitterNavigationViewController: UIViewController {
+class twitterNavViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

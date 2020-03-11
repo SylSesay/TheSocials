@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+#platform: ios, '9.0'
 
 target 'TheSocials' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -7,16 +7,20 @@ target 'TheSocials' do
 
   # Pods for TheSocials
     
-  # Pods for Twitter
+  #Twitter pods
   pod 'TwitterKit'
   pod 'AFNetworking'
   pod 'BDBOAuth1Manager'
   pod 'AlamofireImage'
 
-  # Pods for Instagram
-  pod 'Parse'
-  pod 'AlamofireImage'
+  #Instagram pods
+  pod "Parse"
   pod "MessageInputBar"
+  #pod 'Alamofire', '4.6.0'
+
+  #Facebook pods
+  pod 'Fabric'
+  pod 'FBSDKLoginKit'
 
  
 

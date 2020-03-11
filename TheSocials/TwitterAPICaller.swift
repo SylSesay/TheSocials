@@ -8,11 +8,17 @@
 //  Created by Dan on 1/3/19.
 //  Copyright © 2019 Dan. All rights reserved.
 //
-/*
+
 import UIKit
 import TwitterKit
 import BDBOAuth1Manager
+
 //https://developer.twitter.com/en/apps/create
+/* My info
+consumerKey:vooS3mq5l9wLnMCbub4qYPaRD
+consumerSecret:CzMnh060YMQhPLPZRwb0ronAOh4JV996eDWCM83JO8EWocDjE0
+
+*/
 class TwitterAPICaller: BDBOAuth1SessionManager {
     static let client = TwitterAPICaller(baseURL: URL(string: "https://api.twitter.com"), consumerKey: "vooS3mq5l9wLnMCbub4qYPaRD", consumerSecret: "CzMnh060YMQhPLPZRwb0ronAOh4JV996eDWCM83JO8EWocDjE0")
     var loginSuccess: (() -> ())?
@@ -109,5 +115,17 @@ class TwitterAPICaller: BDBOAuth1SessionManager {
         })
     }
     
+    func tweetView(_ tweetView: TWTRTweetView, didChange newState: TWTRVideoPlaybackState) {
+      switch newState {
+      case .paused:
+        print("Do something when video is paused")
+      case .playing:
+        print("Do something when video starts to play")
+      case .completed:
+        print("Do something when video play is completed")
+      @unknown default: break
+        }
+    }
+    
 }
-*/
+

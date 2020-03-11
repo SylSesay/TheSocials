@@ -15,11 +15,22 @@ PODS:
   - AFNetworking/UIKit (3.0.4):
     - AFNetworking/NSURLSession
   - Alamofire (5.0.2)
-  - AlamofireImage (4.0.1):
+  - AlamofireImage (4.0.2):
     - Alamofire (< 6.0.0, >= 5.0.2)
   - BDBOAuth1Manager (2.0.0):
     - AFNetworking/NSURLSession (~> 3.0.0)
   - Bolts/Tasks (1.9.0)
+  - Fabric (1.10.2)
+  - FBSDKCoreKit (6.2.0):
+    - FBSDKCoreKit/Basics (= 6.2.0)
+    - FBSDKCoreKit/Core (= 6.2.0)
+  - FBSDKCoreKit/Basics (6.2.0)
+  - FBSDKCoreKit/Core (6.2.0):
+    - FBSDKCoreKit/Basics
+  - FBSDKLoginKit (6.2.0):
+    - FBSDKLoginKit/Login (= 6.2.0)
+  - FBSDKLoginKit/Login (6.2.0):
+    - FBSDKCoreKit (~> 6.2.0)
   - MessageInputBar (0.4.1):
     - MessageInputBar/Core (= 0.4.1)
   - MessageInputBar/Core (0.4.1)
@@ -35,6 +46,8 @@ DEPENDENCIES:
   - AFNetworking
   - AlamofireImage
   - BDBOAuth1Manager
+  - Fabric
+  - FBSDKLoginKit
   - MessageInputBar
   - Parse
   - TwitterKit
@@ -46,6 +59,9 @@ SPEC REPOS:
     - AlamofireImage
     - BDBOAuth1Manager
     - Bolts
+    - Fabric
+    - FBSDKCoreKit
+    - FBSDKLoginKit
     - MessageInputBar
     - Parse
     - TwitterCore
@@ -54,14 +70,17 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   Alamofire: 3ba7a4db18b4f62c4a1c0e1cb39d7f3d52e10ada
-  AlamofireImage: a8a5289046ac46b4d0183bcf73ce12ce30564cb7
+  AlamofireImage: ca7325440303d041a80b7caa55066ba945522378
   BDBOAuth1Manager: 92d17d06f8a648602962304cd2f35ae7394fa001
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  Fabric: 706c8b8098fff96c33c0db69cbf81f9c551d0d74
+  FBSDKCoreKit: a7bb9f5ac56c1e11d5f8ae0b90a3610f8744b43a
+  FBSDKLoginKit: 5877adb09cc249870c352d92ecc3246cb925c771
   MessageInputBar: e81c7535347f1f7b923de7080409a535a004b6e4
   Parse: c1ad2a04d2cab2b54b6fb7da05f741abf2cf57d1
   TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
   TwitterKit: 5e4f41d70b9abdb41df5467f52d7aa2c0fd26ebb
 
-PODFILE CHECKSUM: d2e6ceb00fc6024f325b48accdc047df2ccde47b
+PODFILE CHECKSUM: a53d709f07a734cb28c5128898eccd49a235de00
 
 COCOAPODS: 1.9.0

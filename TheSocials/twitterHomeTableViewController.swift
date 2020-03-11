@@ -12,30 +12,41 @@ import TwitterKit
 class twitterHomeTableViewController: UITableViewController {
     
     var tweetArray = [NSDictionary]()
-    var numOftweet: Int!
+    var numberOfTweets: Int!
+    let myRefreshControl = UIRefreshControl()
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        myRefreshControl.addTarget(self, action: #selector(loadTweet), for: .valueChanged)
+        tableView.refreshControl = myRefreshControl
+        self.tableView.rowHeight = UITableView.automaticDimension
+        self.tableView.estimatedRowHeight = 150
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.loadTweet()
+    }
+  
+   @objc func loadTweet(){
+       numberOfTweets = 30
+       let URL = "https://api.twitter.com/1.1/statuses/home_timeline.json"
+       let myPerams = ["count": numberOfTweets]
+    TwitterAPICaller.client?.getDictionariesRequest(url: URL, parameters: myPerams as [String : Any], success: { (tweets: [NSDictionary]) in
+           self.tweetArray.removeAll()
+           for tweet in tweets {
+               self.tweetArray.append(tweet)
+           }
+           self.tableView.reloadData()
+           self.myRefreshControl.endRefreshing()
+       }, failure: { (Error) in
+           print("Could not retrieve tweets!")
+       })
+       
+   }
 
-    }
     
-  /* func loadTweet(){
-        let myUrl = "https://api.twitter.com/1.1/statuses/home_timeline.json"
-        let myParams = ["count" : 10]
-    TWTRTwitter.(url: myUrl, parameters: myParams, success: {(tweets: [NSDictionary]) in
-            self.tweetArray.removeAll()
-            for tweet in tweets{
-                self.tweetArray.append(tweet)
-            }
-        }, failure: {(Error) in
-            print("Could not retrieve tweets!")
-        })
-    }
-    */
-    
-    
+  
 
     @IBAction func onLogout(_ sender: Any) {
       /*  TwitterAPICaller.client?.logout()
@@ -59,6 +70,18 @@ class twitterHomeTableViewController: UITableViewController {
             
         
         return cell
+    }
+    
+    func tweetView(tweetView: TWTRTweetView, shouldDisplayDetailViewController controller: twitterHomeTableViewController) -> Bool {
+      // customize the controller to fit your needs.
+
+      // show the view controller in a way that is appropriate for you current setup which may include pushing on a
+      // navigation stack or presenting in a pop over controller.
+        self.show(controller, sender:self)
+
+      // return false to tell Twitter Kit that you will present the controller on your own.
+      // return true if you want Twitter Kit to present it for you, this is the default if you don't implement this method.
+      return false;
     }
     
     
