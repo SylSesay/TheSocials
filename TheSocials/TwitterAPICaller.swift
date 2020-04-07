@@ -8,7 +8,6 @@
 //  Created by Dan on 1/3/19.
 //  Copyright © 2019 Dan. All rights reserved.
 //
-
 import UIKit
 import TwitterKit
 import BDBOAuth1Manager
@@ -17,8 +16,8 @@ import BDBOAuth1Manager
 /* My info
 consumerKey:vooS3mq5l9wLnMCbub4qYPaRD
 consumerSecret:CzMnh060YMQhPLPZRwb0ronAOh4JV996eDWCM83JO8EWocDjE0
-
 */
+
 class TwitterAPICaller: BDBOAuth1SessionManager {
     static let client = TwitterAPICaller(baseURL: URL(string: "https://api.twitter.com"), consumerKey: "vooS3mq5l9wLnMCbub4qYPaRD", consumerSecret: "CzMnh060YMQhPLPZRwb0ronAOh4JV996eDWCM83JO8EWocDjE0")
     var loginSuccess: (() -> ())?
@@ -114,7 +113,7 @@ class TwitterAPICaller: BDBOAuth1SessionManager {
             failure(error)
         })
     }
-    
+  /*
     func tweetView(_ tweetView: TWTRTweetView, didChange newState: TWTRVideoPlaybackState) {
       switch newState {
       case .paused:
@@ -126,6 +125,8 @@ class TwitterAPICaller: BDBOAuth1SessionManager {
       @unknown default: break
         }
     }
+   */
     
 }
+
 

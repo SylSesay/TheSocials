@@ -17,7 +17,7 @@ class twitterHomeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        myRefreshControl.addTarget(self, action: #selector(loadTweet), for: .valueChanged)
+       // myRefreshControl.addTarget(self, action: #selector(loadTweet), for: .valueChanged)
         tableView.refreshControl = myRefreshControl
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.estimatedRowHeight = 150
@@ -25,9 +25,9 @@ class twitterHomeTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.loadTweet()
+        //self.loadTweet()
     }
-  
+  /*
    @objc func loadTweet(){
        numberOfTweets = 30
        let URL = "https://api.twitter.com/1.1/statuses/home_timeline.json"
@@ -44,14 +44,31 @@ class twitterHomeTableViewController: UITableViewController {
        })
        
    }
+ */
+ 
+/*
+    var tweetView = TWTRTweetView?()
+    let client = TWTRAPIClient()
+    func client;.loadTweet(withID: "20") { [weak self] (tweet, error) in
+      if let t = tweet
+        if let tweetView = self?.tweetView {
+          tweetView.configure(with: t)
+        } else {
+          self?.tweetView = TWTRTweetView(tweet: t, style: TWTRTweetViewStyle.regular)
+        }
+      } else {
+          print("Failed to load Tweet: \(error.localizedDescription)")
+      }
+    }
 
+*/
     
   
 
     @IBAction func onLogout(_ sender: Any) {
-      /*  TwitterAPICaller.client?.logout()
+        TwitterAPICaller.client?.logout()
         self.dismiss(animated: true, completion: nil)
-        UserDefaults.standard.set(false, forKey: "userLoggedin")*/
+        UserDefaults.standard.set(false, forKey: "userLoggedin")
     }
     
     

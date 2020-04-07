@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment version="4608" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -165,7 +166,7 @@
             <objects>
                 <tableViewController id="vvs-in-VAj" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7Ya-ex-AIc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
@@ -189,12 +190,12 @@
             </objects>
             <point key="canvasLocation" x="1645.5999999999999" y="1622.3388305847077"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Facebook Nav View Controller-->
         <scene sceneID="Q4M-wD-2qN">
             <objects>
-                <navigationController id="LJB-zN-Drx" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="facebookNavViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LJB-zN-Drx" customClass="facebookNavViewController" customModule="TheSocials" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UBP-eG-Nob">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
@@ -206,10 +207,10 @@
             </objects>
             <point key="canvasLocation" x="826" y="1624"/>
         </scene>
-        <!--View Controller-->
+        <!--Facebook Login View Controller-->
         <scene sceneID="Orl-VP-EO3">
             <objects>
-                <viewController id="SmL-Xh-XgK" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="facebookLoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SmL-Xh-XgK" customClass="facebookLoginViewController" customModule="TheSocials" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cTU-7r-lHz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -224,6 +225,10 @@
                                 <state key="normal" title="Facebook Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="onFbLoginButton:" destination="SmL-Xh-XgK" eventType="touchUpInside" id="mWi-KT-gu4"/>
+                                    <segue destination="LJB-zN-Drx" kind="presentation" id="0BU-4O-SRA"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0UV-2Z-1he">
                                 <rect key="frame" x="87" y="101" width="201" height="159"/>

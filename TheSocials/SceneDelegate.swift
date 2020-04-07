@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FBSDKCoreKit
+import TwitterKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -19,7 +21,37 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
     }
-
+    /*func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        if let context = URLContexts.first {
+            TWTRTwitter.sharedInstance().application(UIApplication.shared, open: context.url, options: [UIApplication.OpenURLOptionsKey.sourceApplication: context.options.sourceApplication as Any])
+        }
+    }
+ */
+  /*
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        guard let url = URLContexts.first?.url else {
+            return
+        }
+        let _ = ApplicationDelegate.shared.application(
+            UIApplication.shared,
+            open: url,
+            sourceApplication: nil,
+            annotation: [UIApplication.OpenURLOptionsKey.annotation])
+    }
+ */
+ 
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        if let openURLContext = URLContexts.first{
+            let url = openURLContext.url
+            let options: [AnyHashable : Any] = [
+                UIApplication.OpenURLOptionsKey.annotation : openURLContext.options.annotation!,
+                UIApplication.OpenURLOptionsKey.sourceApplication : openURLContext.options.sourceApplication!,
+                UIApplication.OpenURLOptionsKey.openInPlace : openURLContext.options.openInPlace
+            ]
+            TWTRTwitter.sharedInstance().application(UIApplication.shared, open: url, options: options)
+        }
+    }
+ 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.
@@ -47,7 +79,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
+    
 
 
 }
+
 

@@ -19,13 +19,13 @@ class twitterLoginViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         if UserDefaults.standard.bool(forKey: "userLoggedin") == true {
-            self.performSegue(withIdentifier: "LoggintoHome", sender: self)
+            self.performSegue(withIdentifier: "LogintoHome", sender: self)
         }
     }
 
 
     @IBAction func onLoginButton(_ sender: Any) {
-        
+       
         let URL = "https://api.twitter.com/oauth/request_token"
             TwitterAPICaller.client?.login(url: URL, success: {
                 
@@ -35,24 +35,50 @@ class twitterLoginViewController: UIViewController {
                 print("Could not log on!")
             })
         
-      /*
+    
         TWTRTwitter.sharedInstance().logIn { (session, error) in
             if session != nil{
                 UserDefaults.standard.set(session?.userID, forKey: "userId")
                 UserDefaults.standard.set(session?.userName, forKey: "userName")
                 UserDefaults.standard.set(true,forKey: "userLoggedin")
-                
-                let twitterNav = self.storyboard?.instantiateViewController(withIdentifier:"toTwitter") as? twitterNavViewController
+               
+                //let twitterNav = self.storyboard?.instantiateViewController(withIdentifier:"LogintoHome") //as?
+                //twitterNavViewController
                 //twitterHomeTableViewController
-                self.present(twitterNav!, animated: false, completion: nil)
+                self.performSegue(withIdentifier: "LogintoHome", sender: self)
+                //self.present(twitterNav!, animated: false, completion: nil)
+                
             } else{
+                //self.dismiss(animated: true, completion: nil)
                 print(error.debugDescription)
             }
             
         }
-    */
+    
     }
-        
+ /*
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        let logInButton = TWTRLogInButton(logInCompletion: { session, error in
+            if session != nil {
+                UserDefaults.standard.set(session?.userID, forKey: "userId")
+                UserDefaults.standard.set(session?.userName, forKey: "userName")
+                UserDefaults.standard.set(true, forKey: "isLoggedIn")
+
+                print("***** complete with login")
+                self.performSegue(withIdentifier: "toHome", sender: self)
+
+            } else {
+                print("TWTRButton Error:")
+                print(error.debugDescription)
+            }
+        })
+        logInButton.center = self.view.center
+        self.view.addSubview(logInButton)
+    }
+ */
     /*
     // MARK: - Navigation
 
