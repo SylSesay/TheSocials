@@ -1,7 +1,7 @@
 {
-  "name": "thesocials",
+  "name": "TheSocials",
   "version": "1.0.0",
-  "description": "adding file",
+  "description": "social media app",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,10 +10,11 @@
     "type": "git",
     "url": "git+https://github.com/SylSesay/TheSocials.git"
   },
+  "keywords": [],
   "author": "Sylvia Sesay",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/SylSesay/TheSocials/issues"
   },
-  "homepage": "https://github.com/SylSesay/TheSocials#readme"
+  "homepage": "https://github.com/SylSesay/TheSocials"
 }
