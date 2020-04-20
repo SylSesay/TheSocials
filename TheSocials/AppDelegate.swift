@@ -8,6 +8,7 @@
 //
 
 import UIKit
+import Parse
 import TwitterKit
 import FacebookCore
 import FBSDKCoreKit
@@ -24,6 +25,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         TWTRTwitter.sharedInstance().start(withConsumerKey: "vooS3mq5l9wLnMCbub4qYPaRD", consumerSecret: "CzMnh060YMQhPLPZRwb0ronAOh4JV996eDWCM83JO8EWocDjE0")
+        
+        Parse.initialize(
+            with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) -> Void in
+                configuration.applicationId = "Parstagram"
+                configuration.server = "https://peaceful-wildwood-24036.herokuapp.com/parse"
+            })
+        )
+        if PFUser.current() != nil {
+            let main = UIStoryboard(name: "Main", bundle: nil)
+            let feedNavController = main.instantiateViewController(withIdentifier: "FeedNavController")
+            
+            window?.rootViewController = feedNavController
+        }
         return true
     }
     

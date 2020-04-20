@@ -3,4 +3,114 @@
    uuid = "601B7FC8-8541-4264-AA62-04DAFCEEA87E"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5C804CA6-51FD-48C5-9F4F-95392B9D9748"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheSocials/tweetCellTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "tweetCellTableViewCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "5C804CA6-51FD-48C5-9F4F-95392B9D9748 - dd54e3b5ab34c1f7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TheSocials.tweetCellTableViewCell.profileImageView.getter : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "TheSocials"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sylviasesay/Desktop/TheSocials/TheSocials/tweetCellTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "5C804CA6-51FD-48C5-9F4F-95392B9D9748 - e34a0ad2d06a1d8b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TheSocials.tweetCellTableViewCell.profileImageView.setter : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "TheSocials"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sylviasesay/Desktop/TheSocials/TheSocials/tweetCellTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "5C804CA6-51FD-48C5-9F4F-95392B9D9748 - 5a9eb21f4a7824fa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TheSocials.tweetCellTableViewCell.profileImageView.modify : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "TheSocials"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sylviasesay/Desktop/TheSocials/TheSocials/tweetCellTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "67">
+               </Location>
+               <Location
+                  uuid = "5C804CA6-51FD-48C5-9F4F-95392B9D9748 - 856983695b291b74"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TheSocials.tweetCellTableViewCell.profileImageView.modify : Swift.Optional&lt;__C.UIImageView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "TheSocials"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sylviasesay/Desktop/TheSocials/TheSocials/tweetCellTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "5C804CA6-51FD-48C5-9F4F-95392B9D9748 - 3b015a460826fba9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TheSocials.tweetCellTableViewCell.init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; TheSocials.tweetCellTableViewCell"
+                  moduleName = "TheSocials"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sylviasesay/Desktop/TheSocials/TheSocials/tweetCellTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "182">
+               </Location>
+               <Location
+                  uuid = "5C804CA6-51FD-48C5-9F4F-95392B9D9748 - ee78818fc21f95b0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TheSocials.tweetCellTableViewCell.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;TheSocials.tweetCellTableViewCell&gt;"
+                  moduleName = "TheSocials"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sylviasesay/Desktop/TheSocials/TheSocials/tweetCellTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "107">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

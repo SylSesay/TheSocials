@@ -22,6 +22,11 @@
 		E1A4CF1924062E0C00F2277B /* TheSocialsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A4CF1824062E0C00F2277B /* TheSocialsUITests.swift */; };
 		E1A4CF27240639D200F2277B /* twitterLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A4CF26240639D200F2277B /* twitterLoginViewController.swift */; };
 		E1A75933243AE8FF004B579B /* instaLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A75932243AE8FF004B579B /* instaLoginViewController.swift */; };
+		E1A759372441343F004B579B /* instaPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A759362441343F004B579B /* instaPostTableViewCell.swift */; };
+		E1A75939244148AC004B579B /* facebookHomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A75938244148AC004B579B /* facebookHomeTableViewController.swift */; };
+		E1A7593B24415166004B579B /* instaFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A7593A24415166004B579B /* instaFeedTableViewController.swift */; };
+		E1A7593F244B5E8D004B579B /* theSocialsHomeFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A7593E244B5E8D004B579B /* theSocialsHomeFeedTableViewController.swift */; };
+		E1A75951244C12C6004B579B /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A75950244C12C6004B579B /* CameraViewController.swift */; };
 		F1F6E0CAE53F16487E3D0E72 /* Pods_TheSocialsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F1C88EDF14334C02FFED64B /* Pods_TheSocialsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +75,11 @@
 		E1A4CF1A24062E0C00F2277B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1A4CF26240639D200F2277B /* twitterLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = twitterLoginViewController.swift; sourceTree = "<group>"; };
 		E1A75932243AE8FF004B579B /* instaLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instaLoginViewController.swift; sourceTree = "<group>"; };
+		E1A759362441343F004B579B /* instaPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instaPostTableViewCell.swift; sourceTree = "<group>"; };
+		E1A75938244148AC004B579B /* facebookHomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = facebookHomeTableViewController.swift; sourceTree = "<group>"; };
+		E1A7593A24415166004B579B /* instaFeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instaFeedTableViewController.swift; sourceTree = "<group>"; };
+		E1A7593E244B5E8D004B579B /* theSocialsHomeFeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = theSocialsHomeFeedTableViewController.swift; sourceTree = "<group>"; };
+		E1A75950244C12C6004B579B /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		EBB006FD27124507370EFBBD /* Pods-TheSocialsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheSocialsTests.release.xcconfig"; path = "Target Support Files/Pods-TheSocialsTests/Pods-TheSocialsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,8 +169,13 @@
 				E1A4CF26240639D200F2277B /* twitterLoginViewController.swift */,
 				E102A2FD2408C8410005CCE9 /* twitterHomeTableViewController.swift */,
 				E188ECEC240A2DFC0007AA4A /* tweetCellTableViewCell.swift */,
-				E18F41B0242DA495006F98AF /* facebookLoginViewController.swift */,
 				E1A75932243AE8FF004B579B /* instaLoginViewController.swift */,
+				E1A7593A24415166004B579B /* instaFeedTableViewController.swift */,
+				E1A759362441343F004B579B /* instaPostTableViewCell.swift */,
+				E18F41B0242DA495006F98AF /* facebookLoginViewController.swift */,
+				E1A75938244148AC004B579B /* facebookHomeTableViewController.swift */,
+				E1A7593E244B5E8D004B579B /* theSocialsHomeFeedTableViewController.swift */,
+				E1A75950244C12C6004B579B /* CameraViewController.swift */,
 			);
 			path = TheSocials;
 			sourceTree = "<group>";
@@ -460,10 +475,15 @@
 			files = (
 				E1A75933243AE8FF004B579B /* instaLoginViewController.swift in Sources */,
 				E188ECED240A2DFC0007AA4A /* tweetCellTableViewCell.swift in Sources */,
+				E1A75939244148AC004B579B /* facebookHomeTableViewController.swift in Sources */,
 				E18F41B1242DA495006F98AF /* facebookLoginViewController.swift in Sources */,
+				E1A75951244C12C6004B579B /* CameraViewController.swift in Sources */,
 				E1A4CF27240639D200F2277B /* twitterLoginViewController.swift in Sources */,
+				E1A7593F244B5E8D004B579B /* theSocialsHomeFeedTableViewController.swift in Sources */,
 				E102A2FC2408C52E0005CCE9 /* TwitterAPICaller.swift in Sources */,
 				E102A2FE2408C8410005CCE9 /* twitterHomeTableViewController.swift in Sources */,
+				E1A759372441343F004B579B /* instaPostTableViewCell.swift in Sources */,
+				E1A7593B24415166004B579B /* instaFeedTableViewController.swift in Sources */,
 				E1A4CEF724062E0B00F2277B /* AppDelegate.swift in Sources */,
 				E1A4CEF924062E0B00F2277B /* SceneDelegate.swift in Sources */,
 			);

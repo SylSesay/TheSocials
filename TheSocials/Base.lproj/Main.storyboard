@@ -52,12 +52,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jDC-JB-Ye1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="135.38230884557723"/>
+            <point key="canvasLocation" x="-1098" y="555"/>
         </scene>
         <!--Instagram Home-->
         <scene sceneID="PKz-gs-Ay5">
             <objects>
-                <tableViewController id="QSd-Jq-ZgX" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="instaHometableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QSd-Jq-ZgX" customClass="instaHomeTableViewController" customModule="TheSocials" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="skj-oB-5VM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,27 +107,48 @@
                             <outlet property="delegate" destination="QSd-Jq-ZgX" id="aSN-gB-FST"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Instagram Home" id="xZn-qX-1f3"/>
+                    <navigationItem key="navigationItem" title="Instagram Home" id="xZn-qX-1f3">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="r7b-ue-KgY"/>
+                        <barButtonItem key="rightBarButtonItem" title="Post" id="1JS-li-x7F">
+                            <connections>
+                                <segue destination="TRQ-Bm-mGc" kind="presentation" id="s4G-it-OIU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PXN-YH-CC7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1645.5999999999999" y="876.61169415292363"/>
+            <point key="canvasLocation" x="-364" y="2111"/>
         </scene>
         <!--The Socials Home Feed-->
         <scene sceneID="anv-ba-fQx">
             <objects>
-                <tableViewController storyboardIdentifier="TheSocialsHomeFeed" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TRQ-Bm-mGc" customClass="TheSocialsHomeFeed" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="theSocialsHomeFeedTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TRQ-Bm-mGc" customClass="TheSocialsHomeFeedTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zWn-yW-HKJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="498" id="dNp-wf-35m">
-                                <rect key="frame" x="0.0" y="28" width="375" height="498"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="388" id="dNp-wf-35m">
+                                <rect key="frame" x="0.0" y="28" width="375" height="388"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dNp-wf-35m" id="jjt-qu-A3w">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="498"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="388"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <tabBar contentMode="scaleToFill" id="EuP-bJ-VOq">
+                                            <rect key="frame" x="0.0" y="328" width="375" height="49"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <items>
+                                                <tabBarItem title="Twitter" image="twtr-icn-logo.png" selectedImage="TwitterLogo" id="dBa-Nn-8HQ">
+                                                    <color key="badgeColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </tabBarItem>
+                                                <tabBarItem title="Instagram" image="feed_tab" id="P3T-po-cv7"/>
+                                                <tabBarItem title="Facebook" image="profile-Icon" id="qQ0-Bz-1st"/>
+                                            </items>
+                                        </tabBar>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -136,13 +157,11 @@
                             <outlet property="delegate" destination="TRQ-Bm-mGc" id="I1r-hl-Jkg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="The Socials Home Feed" id="ssf-Jj-Kfw" userLabel="The Socials Home Feed">
-                        <barButtonItem key="rightBarButtonItem" title="Post" id="cED-B7-N3y"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="The Socials Home Feed" id="ssf-Jj-Kfw" userLabel="The Socials Home Feed"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Odl-Hg-64V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3577" y="877"/>
+            <point key="canvasLocation" x="-422" y="3116"/>
         </scene>
         <!--The Socials Nav View Controller-->
         <scene sceneID="RaI-Xl-7Ne">
@@ -159,12 +178,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BYY-dn-eKb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2766" y="877"/>
+            <point key="canvasLocation" x="353" y="3139"/>
         </scene>
         <!--Facebook Home-->
         <scene sceneID="ota-Ee-abw">
             <objects>
-                <tableViewController id="vvs-in-VAj" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="facebookHomeTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vvs-in-VAj" customClass="facebookHomeTableViewController" customModule="TheSocials" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7Ya-ex-AIc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -184,11 +203,21 @@
                             <outlet property="delegate" destination="vvs-in-VAj" id="rbo-Ey-Zwh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Facebook Home" id="qWv-NJ-8Tm"/>
+                    <navigationItem key="navigationItem" title="Facebook Home" id="qWv-NJ-8Tm">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" style="plain" id="1Wz-Yd-8j5">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Share" id="0en-wX-qxg">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="TRQ-Bm-mGc" kind="presentation" id="g3u-tO-chW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ty7-04-3AR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1645.5999999999999" y="1622.3388305847077"/>
+            <point key="canvasLocation" x="353" y="2111"/>
         </scene>
         <!--Facebook Nav View Controller-->
         <scene sceneID="Q4M-wD-2qN">
@@ -205,7 +234,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BOa-So-mJE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="826" y="1624"/>
+            <point key="canvasLocation" x="353" y="1334"/>
         </scene>
         <!--Facebook Login View Controller-->
         <scene sceneID="Orl-VP-EO3">
@@ -230,7 +259,7 @@
                                     <segue destination="LJB-zN-Drx" kind="presentation" id="0BU-4O-SRA"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0UV-2Z-1he">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="f.square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0UV-2Z-1he">
                                 <rect key="frame" x="87" y="101" width="201" height="159"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -246,7 +275,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hdm-Ys-L8D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="39" y="1623"/>
+            <point key="canvasLocation" x="354" y="555"/>
         </scene>
         <!--Insta Login View Controller-->
         <scene sceneID="PdX-VZ-jUS">
@@ -256,8 +285,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIr-3O-duy">
-                                <rect key="frame" x="64" y="296.5" width="247" height="54"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIr-3O-duy">
+                                <rect key="frame" x="53" y="297" width="258" height="54"/>
                                 <color key="backgroundColor" red="0.2470588235" green="0.44705882349999998" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="iIr-3O-duy" secondAttribute="height" multiplier="270:59" id="T13-nO-8ol"/>
@@ -265,6 +294,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="tintColor" red="1" green="0.53901953449999995" blue="0.91301260829999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Instagram Login"/>
+                                <connections>
+                                    <action selector="onSignin:" destination="dA7-qq-lxm" eventType="touchUpInside" id="e5f-e2-CTu"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="insta_camera_btn" translatesAutoresizingMaskIntoConstraints="NO" id="7qa-eC-JW3">
                                 <rect key="frame" x="98" y="124" width="179" height="128"/>
@@ -272,6 +304,41 @@
                                     <constraint firstAttribute="height" constant="128" id="Pib-sD-0Wy"/>
                                 </constraints>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i44-5E-dVh" userLabel="Username Text Field">
+                                <rect key="frame" x="52" y="406" width="253" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAb-jk-17f">
+                                <rect key="frame" x="53" y="458" width="103" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pFI-8O-AHE" userLabel="Password Text Field">
+                                <rect key="frame" x="53" y="479" width="258" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afT-EF-MMV">
+                                <rect key="frame" x="175" y="533" width="130" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Sign Up Now !"/>
+                                <connections>
+                                    <action selector="onSignup:" destination="dA7-qq-lxm" eventType="touchUpInside" id="aZp-pc-lHC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjA-fD-0HL">
+                                <rect key="frame" x="53" y="376" width="126" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -285,17 +352,19 @@
                         <viewLayoutGuide key="safeArea" id="B5P-VH-h0m"/>
                     </view>
                     <connections>
+                        <outlet property="passwordField" destination="pFI-8O-AHE" id="bwA-qw-waJ"/>
+                        <outlet property="usernmaeField" destination="i44-5E-dVh" id="cHO-ZT-l7Z"/>
                         <segue destination="pPu-53-Ca0" kind="presentation" identifier="toInstagram" id="qVz-aV-QnW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Raj-cG-PU5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="39.200000000000003" y="876.61169415292363"/>
+            <point key="canvasLocation" x="-364" y="555"/>
         </scene>
-        <!--Instagram Nav View Controller-->
+        <!--Insta Nav View Controller-->
         <scene sceneID="oHl-aS-cpa">
             <objects>
-                <navigationController storyboardIdentifier="instagramNavViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pPu-53-Ca0" customClass="instagramNavViewController" customModule="TheSocials" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="instaNavViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pPu-53-Ca0" customClass="instaNavViewController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qag-h2-p2U">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -307,7 +376,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aTs-Rj-C5m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="825" y="877"/>
+            <point key="canvasLocation" x="-364" y="1334"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -378,12 +447,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1039.2" y="570.76461769115451"/>
+            <point key="canvasLocation" x="-364" y="-278"/>
         </scene>
         <!--Twitter Home-->
         <scene sceneID="dGt-Uj-hen">
             <objects>
-                <tableViewController id="6jw-Xb-sHM" customClass="twitterHomeTableViewController" customModule="TheSocials" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="twitterHomeTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6jw-Xb-sHM" customClass="twitterHomeTableViewController" customModule="TheSocials" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="reY-C3-KUT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -453,11 +522,17 @@
                                 <action selector="onLogout:" destination="6jw-Xb-sHM" id="bu5-Gf-pwP"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Tweet" id="skg-Se-HJH">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="TRQ-Bm-mGc" kind="presentation" id="uiq-6o-Lfn"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AeE-Tp-2hu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1646" y="135"/>
+            <point key="canvasLocation" x="-1098" y="2111"/>
         </scene>
         <!--Twitter Nav View Controller-->
         <scene sceneID="jTB-Tr-Xby">
@@ -477,12 +552,20 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dTf-aY-Tm2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="825" y="134"/>
+            <point key="canvasLocation" x="-1098" y="1334"/>
         </scene>
     </scenes>
     <resources>
+        <image name="TwitterLogo" width="120" height="120"/>
         <image name="TwitterLogoBlue" width="200" height="200"/>
+        <image name="f.square" catalog="system" width="64" height="56"/>
+        <image name="feed_tab" width="25" height="25"/>
         <image name="image_placeholder" width="375" height="375"/>
         <image name="insta_camera_btn" width="25" height="25"/>
+        <image name="profile-Icon" width="26" height="26"/>
+        <image name="twtr-icn-logo.png" width="16" height="13"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="g3u-tO-chW"/>
+    </inferredMetricsTieBreakers>
 </document>
