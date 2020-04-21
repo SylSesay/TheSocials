@@ -1,8 +1,8 @@
 {
-  "name": "TheSocials",
+  "name": "thesocials",
   "version": "1.0.0",
   "description": "social media app",
-  "main": "index.js",
+  "main": "web.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
