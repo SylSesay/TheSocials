@@ -1,0 +1,10 @@
+{
+  "name": "TheSocials",
+  "description": "",
+  "repository": "https://github.com/SylSesay/TheSocials",
+  "keywords": ["node", "heroku"],
+  "buildpacks": [
+      {
+          "url": "heroku/nodejs"
+      }]
+}
